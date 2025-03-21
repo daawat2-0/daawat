@@ -1,0 +1,8 @@
+.filter-btn {
+    margin: 5px;
+}
+.filter-btn.active {
+    background-color: #198754 !important; /* Bootstrap success green */
+    color: white !important;
+    border-color: #198754 !important;
+}
