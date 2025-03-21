@@ -86,15 +86,15 @@
                         <div class="col-md-6 col-lg-7 col-sm-8">
                             <div class="call-to-action">
                                 <div style="margin-right: 30px;">
-                                    <i class="fa fa-envelope-o"></i> Email: 
+                                    <i class="fa fa-envelope-o"></i> Email:
                                     <a href="mailto:daawatishq2@gmail.com">daawatishq2@gmail.com</a>
                                 </div>
-                                
+
                                 <div>
-                                    <i class="fa fa-phone"></i> Telephone: 
+                                    <i class="fa fa-phone"></i> Telephone:
                                     <a href="tel:+13607194072">+1 (360)-719-4072</a>
                                 </div>
-                                
+
                             </div>
                         </div>
                         <div class="col-md-6 col-lg-5 col-sm-4">
@@ -166,7 +166,7 @@
                 <div class="pogoSlider-slide" data-transition="fade" data-duration="1500"
                     style="background:url(img/slider/slide_1.png) no-repeat scroll 0 0 / cover;">
                     <h2 class="pogoSlider-slide-element" data-in="slideDown" data-out="flipX" data-duration="1000"
-                        style="margin-top: 200px;">
+                        style="margin-top: 250px;">
                         Welcome to</h2>
                     <h1 class="pogoSlider-slide-element" data-in="expand" data-out="flipX" data-duration="1500">
                         <img src="img/big_logo.png" alt="Dawat-A-Ishq Restaurant" style="width: 100%; height: auto;">
@@ -258,7 +258,7 @@
                         </ul>
                         <button type="button" class="btn btn-warning"
                             style="background-color: #f8bf2c; border: 2px solid #f8bf2c; border-radius: 3px; color: black;margin:20px 0px;width: 80%;"
-                            disabled>order Online</button>
+                            disabled>Order Online coming soon</button>
                         <div class="map-responsive" style="width: 100%;">
                             <iframe
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2793.4012569944653!2d-122.62321422319356!3d45.56236892688252!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5495a7ba594aa9bd%3A0x7516b72b8e31f37b!2sDaawat%20a%20Ishq!5e0!3m2!1sen!2sus!4v1742525287532!5m2!1sen!2sus"
@@ -524,13 +524,24 @@
     </div>
     <!--FOOER AREA END-->
 
+    <!-- hamburger script -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".navbar-nav li a").click(function () {
+                $(".navbar-collapse").collapse("hide");
+            });
+        });
+    </script>
+
+    <!-- Contact us and email.js -->
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script>
         emailjs.init("b6DXBGzC3amtnNZFQ");
-    
+
         document.getElementById("contact-form").addEventListener("submit", function (event) {
             event.preventDefault();
-    
+
             emailjs.send("service_tjnreyg", "template_4bsqio9", {
                 name: document.getElementById("name").value,
                 email: document.getElementById("email").value,
@@ -545,8 +556,8 @@
                     stopOnFocus: true
                 }).showToast();
                 document.getElementById("name").value = "",
-                document.getElementById("email").value = "",
-                document.getElementById("message").value= ""
+                    document.getElementById("email").value = "",
+                    document.getElementById("message").value = ""
             }, error => {
                 Toastify({
                     text: "Failed to send message. Try again!",
@@ -559,7 +570,7 @@
             });
         });
     </script>
-    
+
 
     <!-- Custome javascript for Menu switch  -->
     <script>
