@@ -6,6 +6,13 @@
     min-height: 52px !important;
 }
 
+@media (max-width: 635px) {
+    .call-to-action {
+        display: block !important;
+        margin-bottom: 10px;
+    }
+}
+
 /* Top banner end */
 
 
