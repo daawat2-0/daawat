@@ -94,7 +94,7 @@ jQuery(document).on('ready', function ($) {
         var target = $(id).offset().top - offset;
         $('html, body').animate({
             scrollTop: target
-        }, 1500, "easeInOutExpo");
+        }, 50, "easeInOutExpo");
         event.preventDefault();
     });
 
