@@ -52,9 +52,6 @@
 
 /* Contact us */
 
-
-
-
 #contact-form input, #contact-form textarea {
     width: 100%;
     padding: 10px;
@@ -88,4 +85,9 @@
 
 #contact-form button:hover {
     background-color: #0056b3;
+}
+
+/* footer */
+.bottom-footer{
+    border-top: 2px solid #2B2C2D;
 }
