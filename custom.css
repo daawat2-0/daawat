@@ -91,3 +91,18 @@
 .bottom-footer{
     border-top: 2px solid #2B2C2D;
 }
+
+
+
+#termsOfUse{
+    opacity: 1 !important;
+    visibility: visible !important;
+    padding-top: 250px;
+}
+
+#privacyPolicy{
+    opacity: 1 !important;
+    visibility: visible !important;
+    padding-top: 250px;
+}
+
