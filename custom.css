@@ -1,3 +1,22 @@
+/* Top banner start */
+.call-to-action{
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    min-height: 52px !important;
+}
+
+/* Top banner end */
+
+
+/* logo position */
+.logo-position{
+    position: relative;
+    top: -12px;
+}
+
+
+/* Menu button  start*/
 .filter-btn {
     margin: 5px;
 }
@@ -5,4 +24,57 @@
     background-color: #198754 !important; /* Bootstrap success green */
     color: white !important;
     border-color: #198754 !important;
+}
+
+/* Menu button  end*/
+
+
+/* Contact us */
+#contact {
+    background-color: #f8f9fa;
+    padding: 60px 0;
+}
+
+#contact-form {
+    max-width: 600px;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#contact-form input, #contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+#contact-form input:focus, #contact-form textarea:focus {
+    border-color: #007bff;
+    box-shadow: 0px 0px 5px rgba(0, 123, 255, 0.5);
+    outline: none;
+}
+
+#contact-form textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+#contact-form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+}
+
+#contact-form button:hover {
+    background-color: #0056b3;
 }

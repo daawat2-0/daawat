@@ -50,6 +50,11 @@
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     <script src="./portlandItem.js"></script>
     <script src="./vancouverItem.js"></script>
+
+    <!-- for toastify -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
     <!--[if lt IE 9]>
         <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
         <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -79,8 +84,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-6 col-lg-7 col-sm-8">
-                            <div class="call-to-action"
-                                style="display: flex;justify-content: center;height: 52px;align-items: center;">
+                            <div class="call-to-action">
                                 <div style="margin-right: 30px;"><i class="fa fa-envelope-o"></i>Email: <a
                                         href="#">daawatishq2@gmail.com</a></div>
                                 <div><i class="fa fa-phone"></i>Telephone: <a href="#">+1 (360)-719-4072</a></div>
@@ -125,8 +129,10 @@
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
                             </button>
-                            <a href="#home" class="navbar-brand"><img src="img/main_logo_black.png" alt="logo"></a>
-                            <a href="#home" class="navbar-brand white"><img src="img/main_logo.png" alt="logo"></a>
+                            <a href="#home" class="navbar-brand logo-position"><img src="img/main_logo_black.png"
+                                    alt="logo"></a>
+                            <a href="#home" class="navbar-brand white logo-position"><img src="img/main_logo.png"
+                                    alt="logo"></a>
                         </div>
                         <div class="collapse navbar-collapse bs-example-js-navbar-scrollspy">
                             <div class="search-form-area">
@@ -204,7 +210,7 @@
 
             <div class="row">
                 <!-- Location 1 -->
-                <div class="col-md-6 mb-4 d-flex">
+                <div class="col-md-6 mb-4 d-flex" style="margin-top: 30px;">
                     <div class="location-box flex-fill">
                         <h4>Vancouver Restaurant</h4>
                         <p><strong>Address:</strong> 10820 NE Coxley Dr, Vancouver, WA 98662</p>
@@ -234,7 +240,7 @@
                 </div>
 
                 <!-- Location 2 -->
-                <div class="col-md-6 mb-4 d-flex">
+                <div class="col-md-6 mb-4 d-flex" style="margin-top: 30px;">
                     <div class="location-box flex-fill">
                         <h4>Portland Restaurant</h4>
                         <p><strong>Address:</strong> 5427 NE 42nd Ave, Portland, OR 97218</p>
@@ -264,7 +270,7 @@
         </div>
     </section>
 
-    </section>
+    <!-- </section> -->
     <!--ABOUT AREA END-->
 
     <!--SPEACIAL PROMOTIONS AREA-->
@@ -463,9 +469,17 @@
         </div>
     </section>
 
+    <section id="contact">
 
+        <form id="contact-form">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
     <!--FOOTER AREA-->
-    <div class="footer-area" id="contact">
+    <div class="footer-area">
         <div class="footer-area-bg" data-stellar-background-ratio="0.6"></div>
         <div class="container wow fadeIn">
             <div class="row">
@@ -508,6 +522,43 @@
         </div>
     </div>
     <!--FOOER AREA END-->
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        emailjs.init("b6DXBGzC3amtnNZFQ");
+    
+        document.getElementById("contact-form").addEventListener("submit", function (event) {
+            event.preventDefault();
+    
+            emailjs.send("service_tjnreyg", "template_4bsqio9", {
+                name: document.getElementById("name").value,
+                email: document.getElementById("email").value,
+                message: document.getElementById("message").value
+            }).then(response => {
+                Toastify({
+                    text: "Message sent successfully!",
+                    duration: 3000,
+                    gravity: "top",
+                    position: "right",
+                    backgroundColor: "#28a745",
+                    stopOnFocus: true
+                }).showToast();
+                document.getElementById("name").value = "",
+                document.getElementById("email").value = "",
+                document.getElementById("message").value= ""
+            }, error => {
+                Toastify({
+                    text: "Failed to send message. Try again!",
+                    duration: 3000,
+                    gravity: "top",
+                    position: "right",
+                    backgroundColor: "#dc3545",
+                    stopOnFocus: true
+                }).showToast();
+            });
+        });
+    </script>
+    
 
     <!-- Custome javascript for Menu switch  -->
     <script>
