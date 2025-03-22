@@ -310,3 +310,15 @@ jQuery(window).on('load', function () {
     ----------------------------*/
     $(".preeloader").fadeOut(1000);
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    if (window.location.hash === "#home") {
+        history.replaceState(null, null, ' ');
+    }
+});
+
+document.querySelectorAll('a[href="#home"]').forEach(link => {
+    link.addEventListener("click", (e) => {
+        e.preventDefault(); // Prevents unwanted scroll
+    });
+});
