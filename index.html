@@ -54,7 +54,7 @@
     <!-- for toastify -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-  
+
     <!--[if lt IE 9]>
         <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
         <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -169,7 +169,7 @@
         </div>
 
         <!--HHOME SLIDER AREA-->
-   <div class="slider-area">
+        <div class="slider-area">
             <div class="pogoSlider">
                 <div class="pogoSlider-slide" data-transition="fade" data-duration="1500"
                     style="background:url(img/slider/slide_1.png) no-repeat scroll 0 0 / cover;">
@@ -181,11 +181,11 @@
                     </h1>
                     <div>
                         <span class="btn btn-warning"
-                        style="flex: 1; background-color: #f8bf2c; border: 2px solid #f8bf2c; border-radius: 3px; color: black; margin: 5px; text-align: center; padding: 10px;"
-                        data-glf-cuid="8860f8da-c1fc-4738-a876-f5e3227a75c4"
-                        data-glf-ruid="ea8cde35-ad76-42d2-b50a-4f428c8f3515">
-                        Order Online
-                    </span>
+                            style="flex: 1; background-color: #f8bf2c; border: 2px solid #f8bf2c; border-radius: 3px; color: black; margin: 5px; text-align: center; padding: 10px;"
+                            data-glf-cuid="8860f8da-c1fc-4738-a876-f5e3227a75c4"
+                            data-glf-ruid="ea8cde35-ad76-42d2-b50a-4f428c8f3515">
+                            Order Online
+                        </span>
                     </div>
                 </div>
                 <div class="pogoSlider-slide" data-transition="fade"
@@ -212,7 +212,7 @@
                         Reservation</span>
                 </div>
             </div>
-        </div> -->
+        </div>
         <!--HOME SLIDER AREA END-->
 
     </header>
@@ -632,12 +632,21 @@
     <!-- hamburger script -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
-        $(document).ready(function () {
-            $(".navbar-nav li a").click(function () {
-                $(".navbar-collapse").collapse("hide");
+        document.addEventListener("DOMContentLoaded", function () {
+            var navLinks = document.querySelectorAll(".nav.navbar-nav li a");
+            var navbarCollapse = document.querySelector(".navbar-collapse");
+
+            navLinks.forEach(function (link) {
+                link.addEventListener("click", function () {
+                    if (window.innerWidth <= 768) { // Check if it's mobile view
+                        navbarCollapse.classList.remove("in"); // Close the menu
+                        navbarCollapse.style.height = "0px"; // Hide collapsed menu
+                    }
+                });
             });
         });
     </script>
+
     <!-- Bootstrap JS (Required for Modal) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
@@ -822,49 +831,49 @@
     <!--===== ACTIVE JS=====-->
     <script src="js/main.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
- <!-- Safari scroll fix -->
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        // Prevent scroll jump to #home on load
-        if (window.location.hash === "#home") {
-            history.replaceState(null, null, ' ');
-        }
-
-        // Prevent scroll restoration on reload/back
-        if ('scrollRestoration' in history) {
-            history.scrollRestoration = 'manual';
-        }
-
-        // Prevent default scroll when clicking on #home links
-        document.querySelectorAll('a[href="#home"]').forEach(link => {
-            link.addEventListener("click", function (e) {
-                e.preventDefault();
-            });
-        });
-
-        // Prevent Safari double-tap jump
-        document.addEventListener("touchstart", function () {
+    <!-- Safari scroll fix -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Prevent scroll jump to #home on load
             if (window.location.hash === "#home") {
-                window.scrollTo(0, 0);
+                history.replaceState(null, null, ' ');
             }
-        });
 
-        // Delay slider init to allow layout stabilization
-        setTimeout(() => {
-            if ($('.pogoSlider').length) {
-                $('.pogoSlider').pogoSlider().data('plugin_pogoSlider');
+            // Prevent scroll restoration on reload/back
+            if ('scrollRestoration' in history) {
+                history.scrollRestoration = 'manual';
             }
-        }, 300);
-    });
-</script>
-<script>
-    // Prevent Safari from auto-jumping to top when the page loads or touches
-    window.scrollTo(0, 0);
-    window.addEventListener('touchstart', function() {
-      window.scrollTo(window.scrollX, window.scrollY);
-    }, { passive: true });
-  </script>
-     <script>
+
+            // Prevent default scroll when clicking on #home links
+            document.querySelectorAll('a[href="#home"]').forEach(link => {
+                link.addEventListener("click", function (e) {
+                    e.preventDefault();
+                });
+            });
+
+            // Prevent Safari double-tap jump
+            document.addEventListener("touchstart", function () {
+                if (window.location.hash === "#home") {
+                    window.scrollTo(0, 0);
+                }
+            });
+
+            // Delay slider init to allow layout stabilization
+            setTimeout(() => {
+                if ($('.pogoSlider').length) {
+                    $('.pogoSlider').pogoSlider().data('plugin_pogoSlider');
+                }
+            }, 300);
+        });
+    </script>
+    <script>
+        // Prevent Safari from auto-jumping to top when the page loads or touches
+        window.scrollTo(0, 0);
+        window.addEventListener('touchstart', function () {
+            window.scrollTo(window.scrollX, window.scrollY);
+        }, { passive: true });
+    </script>
+    <script>
         $(document).ready(function () {
             $(".navbar-nav li a").on("click", function () {
                 if ($(".navbar-toggle").is(":visible")) {
@@ -872,7 +881,7 @@
                 }
             });
         });
-    </script> 
+    </script>
 </body>
 
 </html>
