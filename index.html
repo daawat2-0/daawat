@@ -864,7 +864,15 @@
       window.scrollTo(window.scrollX, window.scrollY);
     }, { passive: true });
   </script>
-      
+     <script>
+        $(document).ready(function () {
+            $(".navbar-nav li a").on("click", function () {
+                if ($(".navbar-toggle").is(":visible")) {
+                    $(".navbar-collapse").collapse("hide");
+                }
+            });
+        });
+    </script> 
 </body>
 
 </html>
