@@ -54,11 +54,7 @@
     <!-- for toastify -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-    <script>
-        if ('scrollRestoration' in history) {
-          history.scrollRestoration = 'manual';
-        }
-      </script>
+  
     <!--[if lt IE 9]>
         <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
         <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -82,7 +78,7 @@
     <!-- <a href="#home" class="scrolltotop"><i class="fa fa-long-arrow-up"></i></a> -->
 
     <!--START TOP AREA-->
-    <header class="top-area" id="home">
+    <header class="top-area">
         <div class="header-top-area" style="padding-top: 5px;">
             <div class="top-bar">
                 <div class="container">
@@ -173,7 +169,7 @@
         </div>
 
         <!--HHOME SLIDER AREA-->
-      <!--   <div class="slider-area">
+   <div class="slider-area">
             <div class="pogoSlider">
                 <div class="pogoSlider-slide" data-transition="fade" data-duration="1500"
                     style="background:url(img/slider/slide_1.png) no-repeat scroll 0 0 / cover;">
@@ -861,7 +857,13 @@
         }, 300);
     });
 </script>
-
+<script>
+    // Prevent Safari from auto-jumping to top when the page loads or touches
+    window.scrollTo(0, 0);
+    window.addEventListener('touchstart', function() {
+      window.scrollTo(window.scrollX, window.scrollY);
+    }, { passive: true });
+  </script>
       
 </body>
 
