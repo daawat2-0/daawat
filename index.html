@@ -826,14 +826,42 @@
     <!--===== ACTIVE JS=====-->
     <script src="js/main.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
-    <script>
-        window.addEventListener('load', function () {
-          if (window.location.hash) {
+ <!-- Safari scroll fix -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Prevent scroll jump to #home on load
+        if (window.location.hash === "#home") {
             history.replaceState(null, null, ' ');
-            window.scrollTo(0, 0);
-          }
+        }
+
+        // Prevent scroll restoration on reload/back
+        if ('scrollRestoration' in history) {
+            history.scrollRestoration = 'manual';
+        }
+
+        // Prevent default scroll when clicking on #home links
+        document.querySelectorAll('a[href="#home"]').forEach(link => {
+            link.addEventListener("click", function (e) {
+                e.preventDefault();
+            });
         });
-      </script>
+
+        // Prevent Safari double-tap jump
+        document.addEventListener("touchstart", function () {
+            if (window.location.hash === "#home") {
+                window.scrollTo(0, 0);
+            }
+        });
+
+        // Delay slider init to allow layout stabilization
+        setTimeout(() => {
+            if ($('.pogoSlider').length) {
+                $('.pogoSlider').pogoSlider().data('plugin_pogoSlider');
+            }
+        }, 300);
+    });
+</script>
+
       
 </body>
 
