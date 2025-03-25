@@ -7,27 +7,31 @@
 <!--<![endif]-->
 
 <head>
-<!-- SEO Optimized Head Section -->
+    <!-- SEO Optimized Head Section -->
     <title>Best Indian Restaurant in Vancouver & Portland | Daawat A Ishq</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Enjoy authentic Indian cuisine at Daawat A Ishq in Vancouver, WA & Portland, OR. Order online or reserve a table today!">
-    <meta name="keywords" content="Indian Restaurant, Vancouver WA, Portland OR, Butter Chicken, Curry, Indian Food, Order Online, Best Indian Restaurant">
+    <meta name="description"
+        content="Enjoy authentic Indian cuisine at Daawat A Ishq in Vancouver, WA & Portland, OR. Order online or reserve a table today!">
+    <meta name="keywords"
+        content="Indian Restaurant, Vancouver WA, Portland OR, Butter Chicken, Curry, Indian Food, Order Online, Best Indian Restaurant">
     <meta name="author" content="Daawat A Ishq">
     <link rel="canonical" href="https://www.daawataishq.com/">
 
-<!-- Open Graph Tags for Social Sharing -->
+    <!-- Open Graph Tags for Social Sharing -->
     <meta property="og:title" content="Daawat A Ishq - Authentic Indian Restaurant">
-    <meta property="og:description" content="Serving fresh and flavorful Indian food in Vancouver & Portland. Order online or dine-in!">
+    <meta property="og:description"
+        content="Serving fresh and flavorful Indian food in Vancouver & Portland. Order online or dine-in!">
     <meta property="og:image" content="https://www.daawataishq.com/img/slider/slide_1.png">
     <meta property="og:url" content="https://www.daawataishq.com">
     <meta property="og:type" content="website">
 
-<!-- Twitter Card Tags -->
+    <!-- Twitter Card Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Daawat A Ishq - Indian Cuisine">
-    <meta name="twitter:description" content="Authentic Indian flavors in Vancouver & Portland. Online orders available.">
+    <meta name="twitter:description"
+        content="Authentic Indian flavors in Vancouver & Portland. Online orders available.">
     <meta name="twitter:image" content="https://www.daawataishq.com/img/slider/slide_1.png">
 
     <!--====== FAVICON ICON =======-->
@@ -411,6 +415,8 @@
                                 data-filter=".vancouverVegetarianCurries">Vegetarian Curries</button>
                             <button class="btn btn-outline-success filter filter-btn"
                                 data-filter=".vancouverNonVegCurries">Non- Veg Curries</button>
+                            <button class="btn btn-outline-success filter filter-btn"
+                                data-filter=".vancouverBiryani">Biryani</button>
                             <button class="btn btn-outline-success filter filter-btn"
                                 data-filter=".vancouverChefSpecial">Chef's Special</button>
                             <button class="btn btn-outline-success filter filter-btn"
@@ -802,18 +808,21 @@
             let menuList = document.getElementById("vancouver-menu-list");
             vancouverMenu.forEach(item => {
                 let child = `<div class="mix col-md-6 col-lg-6 col-sm-12 col-xs-12 single-menu vancouverAll ${item.type}">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="single-menu-details">
-                                <div class="food-menu-img"><img src= "${item.imageLink}" alt=""></div>
-                                <div class="food-menu-details">
-                                    <h3>${item.itemName}<span class="menu-price">$${item.price}</span></h3>
-                                    <p>${item.Ingredients}</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>`;
+    <div class="card">
+        <div class="card-body">
+            <div class="single-menu-details">
+                <div class="food-menu-img">
+                    <img src="${item.imageLink}" alt="${item.itemName}">
+                </div>
+                <div class="food-menu-details">
+                    <h3>${item.itemName} <span class="menu-price">$${item.price}</span></h3>
+                    <p>${item.Ingredients}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+`;
                 menuList.insertAdjacentHTML("beforeend", child); // Use insertAdjacentHTML
             });
         });
