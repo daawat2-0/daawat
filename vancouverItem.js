@@ -26,7 +26,8 @@ const vancouverMenu = [
 
 
     // Tandoori Kababs
-    {itemName : "Tandoori Chicken (Full/Half)", price : 19.99/12.99, Ingredients : "Chicken is marinated in tandoori masala & cooked inside the tandoor",type:"vancouverTandooriKababs", imageLink : "./Menu/Tandoori chicken.png"},
+    {itemName : "Tandoori Chicken Full", price : 19.99, Ingredients : "Chicken is marinated in tandoori masala & cooked inside the tandoor",type:"vancouverTandooriKababs", imageLink : "./Menu/Tandoori chicken.png"},
+     {itemName : "Tandoori Chicken HALF", price : 12.99, Ingredients : "Chicken is marinated in tandoori masala & cooked inside the tandoor",type:"vancouverTandooriKababs", imageLink : "./Menu/Tandoori chicken.png"},
     {itemName : "Chicken Seekh Kabab", price : 14.99, Ingredients : "Chicken seasoned with ginger, garlic, and house blend spices and baked inside the tandoor",type:"vancouverTandooriKababs", imageLink : "./Menu/chicken seekh kabab.png"},
     {itemName : "Lamb Seekh Kabab", price : 15.99, Ingredients : "Ground Lamb seasoned with ginger, garlic and house blend spices and baked inside the tandoor",type:"vancouverTandooriKababs", imageLink : "./Menu/Lamb Seekh Kabab.png"},
     {itemName : "Lamb Boti Kabab", price : 16.99, Ingredients : "Lamb marinated in yogurt, ginger, garlic and secret house spices, Lamb is cooked inside the tandoor to perfection & served with mint & tamarind chutney",type:"vancouverTandooriKababs", imageLink : "./Menu/lamb boti kabab.png"},
@@ -40,7 +41,7 @@ const vancouverMenu = [
     {itemName : "Aloo Matar", price : 17.99, Ingredients : "Peas & potatoes cooked in an onion tomato base with special house-blended spices",type:"vancouverVegetarianCurries", imageLink : "./Menu/aloo matar.png"},
     {itemName : "Palak Aloo", price : 17.99, Ingredients : "Spinach and Potatoes cooked in onion tomatoes & spices.",type:"vancouverVegetarianCurries", imageLink : "./Menu/Palak Aloo.png"},
     {itemName : "Channa Saag", price : 18.99, Ingredients : "Garbanzo beans cooked with tempered spinach, onions & tomatoes",type:"vancouverVegetarianCurries", imageLink : "./Menu/chana saag.png"},
-    {itemName : "Mix Veg Kofta", price : 1.99, Ingredients : "Medley of minced vegetable dumplings tossed in garlic, ginger, onion",type:"vancouverVegetarianCurries", imageLink : "./Menu/Mix Veg Kofta.jpg"},
+    {itemName : "Mix Veg Kofta", price : 18.99, Ingredients : "Medley of minced vegetable dumplings tossed in garlic, ginger, onion",type:"vancouverVegetarianCurries", imageLink : "./Menu/Mix Veg Kofta.jpg"},
     {itemName : "Deewani Handi", price : 19.99, Ingredients : "A classic authentic royal vegetables preparation cooked in a handi, the vegetables are tossed together with ginger, garlic, and masala powders.",type:"vancouverVegetarianCurries", imageLink : "./Menu/Deewani Handi.jpg"},
     {itemName : "Matar Paneer", price : 18.99, Ingredients : "Peas and Paneer cooked in an onion tomato base with special blend spices for a smooth creamy dish",type:"vancouverVegetarianCurries", imageLink : "./Menu/matar panner.PNG"},
     {itemName : "Channa Masala", price : 18.99, Ingredients : "Garbanzo beans cooked with onion, tomatoes, ginger, garlic and spices",type:"vancouverVegetarianCurries", imageLink : "./Menu/Chana masala.JPG"},
@@ -69,7 +70,7 @@ const vancouverMenu = [
     {itemName : "Kadhai Goat", price : 21.99, Ingredients : "Goat cooked in a gravy with onion, tomato and bell pepper garnished with fresh ginger.",type:"vancouverNonVegCurries", imageLink : "./Menu/kadhai gosht.png"},
     {itemName : "Goat Saag", price : 21.99, Ingredients : "Classic Indian dish where the Goat is cooked with spinach. Nutrient-rich, low fat and low calorie meal.",type:"vancouverNonVegCurries", imageLink : "./Menu/Goat Saag.png"},
     {itemName : "Chicken Korma", price : 20.99, Ingredients : "Chicken mildly spiced with cream & yogurt. Very mild dish with a smoothy flavour.",type:"vancouverNonVegCurries", imageLink : "./Menu/Chicken Korma.png"},
-    {itemName : "Lamb Korma", price : 18.99, Ingredients : "Lamb is mildly spiced with cream & yogurt. Very mild dish with a smooth flavour.",type:"vancouverNonVegCurries", imageLink : "./Menu/lamb korma.png"},
+    {itemName : "Lamb Korma", price : 20.99, Ingredients : "Lamb is mildly spiced with cream & yogurt. Very mild dish with a smooth flavour.",type:"vancouverNonVegCurries", imageLink : "./Menu/lamb korma.png"},
     {itemName : "Mango Chicken", price : 19.99, Ingredients : "A delightful blend of tender chicken, aromatic spices and ripe mangoes, creating a mouthwatering dish that balances sweet and savoury flavours in every bite.",type:"vancouverNonVegCurries", imageLink : "./Menu/mango chicken.png"},
     {itemName : "Chicken Curry", price : 19.99, Ingredients : "Traditional curry cooked with an exotic blend of flavourful spices, onions & tomatoes.",type:"vancouverNonVegCurries", imageLink : "./Menu/chicken curry.png"},
     {itemName : "Chicken Saag", price : 19.99, Ingredients : "Classic Indian Dish where the chicken is cooked with spinach. Nutrient rich, low fat & low calorie meal.",type:"vancouverNonVegCurries", imageLink : "./Menu/chicken saag.png"},
@@ -82,7 +83,7 @@ const vancouverMenu = [
     {itemName : "Madras Curry Chicken", price : 19.99, Ingredients : "A spicy curry from the south of India where chicken is cooked in tempered spices.",type:"vancouverNonVegCurries", imageLink : "./Menu/madras curry chicken.png"},
     {itemName : "Madras Curry Goat", price : 21.99, Ingredients : "Goat curry with a delicious flavor of Madras curry, tamarind and coconut milk. Tempered with cumin and mustard seeds.",type:"vancouverNonVegCurries", imageLink : "./Menu/madras curry goat.png"},
     {itemName : "Madras Curry Lamb", price : 20.99, Ingredients : "Lamb curry with a delicious flavour of Madras curry, tamarind, and coconut milk. Tempered with cumin and mustard seeds.",type:"vancouverNonVegCurries", imageLink : "./Menu/madras curry lamb.png"},
-    {itemName : "Lamb Masala", price : 20.99, Ingredients : "Traditional curry cooked with an exotic blend of spices, onions & tomatoes. Flavourful.",type:"vancouverNonVegCurries", imageLink : "./Menu/lamb masala.png"},
+    {itemName : "Lamb Masala", price : 21.99, Ingredients : "Traditional curry cooked with an exotic blend of spices, onions & tomatoes. Flavourful.",type:"vancouverNonVegCurries", imageLink : "./Menu/lamb masala.png"},
     {itemName : "Chicken Changezi", price : 20.99, Ingredients : "Popular chicken delicacy in the said to have its origin with the mongolian ruler Ghenghis Khan. Chicken cooked in onion, tomato, ginger, garlic, cashews, cream and a hint of lemon.",type:"vancouverNonVegCurries", imageLink : "./Menu/chicken changezi.png"},
 
 
