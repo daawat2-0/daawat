@@ -442,6 +442,7 @@
             <h3>Specials Promos are online Only</h3>
             <span class="btn btn-warning"
                   id="openOrderPromo1"
+                  onclick={handleOrderPromo1()}
                   style="background-color: #f8bf2c; border: 2px solid #f8bf2c; border-radius: 3px; color: black; margin-top: 5px; margin-left: 100px;">
               Order Online
             </span>
@@ -817,21 +818,29 @@
     <!--FOOER AREA END-->
 
     <!-- Modal Script -->
+
+    <script>
+        const handleOrderPromo1 = () => {
+            console.log("Order Promo 1 clicked from function");
+            promoModal1.style.display = "block";
+        };
+    </script>
 <script>
   const promoModal1 = document.getElementById("promoModal1");
   const promoModal2 = document.getElementById("promoModal2");
   const closePromoModal1 = document.getElementById("closePromoModal1");
   const closePromoModal2 = document.getElementById("closePromoModal2");
 
-  const openOrderPromo1 = document.getElementById("openOrderPromo1");
+//   const openOrderPromo1 = document.getElementById("openOrderPromo1");
   const openOrderPromo2 = document.getElementById("openOrderPromo2");
 
-  openOrderPromo1.onclick = () => {
-    promoModal1.style.display = "block";
-  };
-  openOrderPromo2.addEventListener("click", () => {
+//   openOrderPromo1.onclick = () => {
+//     console.log("Open Order Promo 1 clicked");
+//     promoModal1.style.display = "block";
+//   };
+  openOrderPromo2.onclick  = () => {
     promoModal2.style.display = "block";
-  });
+  };
 
   closePromoModal1.onclick = () => {
     promoModal1.style.display = "none";
