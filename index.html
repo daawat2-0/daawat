@@ -259,8 +259,7 @@
                 <div>
                     <span class="btn btn-warning"
                           style="flex: 1; background-color: #f8bf2c; border: 2px solid #f8bf2c; border-radius: 3px; color: black; margin: 5px; text-align: center; padding: 10px;"
-                          data-glf-cuid="8860f8da-c1fc-4738-a876-f5e3227a75c4"
-                          data-glf-ruid="ea8cde35-ad76-42d2-b50a-4f428c8f3515">
+                          >
                         Order Online
                     </span>
                 </div>
@@ -421,48 +420,101 @@
     <!--ABOUT AREA END-->
 
     <!--SPEACIAL PROMOTIONS AREA-->
-    <section class="promotions-area section-padding" id="promotion">
-        <div class="promotion-area-bg" data-stellar-background-ratio="0.6"></div>
-        <div class="container wow fadeIn">
-            <div class="row">
-                <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
-                    <div class="area-title text-center">
-                        <h2>Online Specials</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="menu-discount-offer col-md-12 col-lg-12 col-sm-12 col-xs-12">
-                    <div class="single-promotions">
-                        <div class="promotions-img">
-                            <img src="img/promotions/promo_slide_1.png" alt="">
-                        </div>
-                        <div class="promotions-details">
-                            <h3>Specials Promos are online Only</h3>
-                            <span class=" btn btn-warning" ,
-                                style="background-color: #f8bf2c; border: 2px solid #f8bf2c; border-radius: 3px; color: black;margin:20px 0px;width: 80%;"
-                                data-glf-cuid="8860f8da-c1fc-4738-a876-f5e3227a75c4"
-                                data-glf-ruid="ea8cde35-ad76-42d2-b50a-4f428c8f3515">Order Online</span>
+   <section class="promotions-area section-padding" id="promotion">
+  <div class="promotion-area-bg" data-stellar-background-ratio="0.6"></div>
+  <div class="container wow fadeIn">
+    <div class="row">
+      <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+        <div class="area-title text-center">
+          <h2>Online Specials</h2>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="menu-discount-offer col-md-12 col-lg-12 col-sm-12 col-xs-12">
 
-                        </div>
-                    </div>
-                    <div class="single-promotions">
-                        <div class="promotions-img">
-                            <img src="img/promotions/promo_slide_2.png" alt="">
+        <!-- First Promotion -->
+        <div class="single-promotions">
+          <div class="promotions-img">
+            <img src="img/promotions/promo_slide_1.png" alt="">
+          </div>
+          <div class="promotions-details">
+            <h3>Specials Promos are online Only</h3>
+            <span class="btn btn-warning"
+                  id="openOrderPromo1"
+                  style="background-color: #f8bf2c; border: 2px solid #f8bf2c; border-radius: 3px; color: black; margin-top: 5px; margin-left: 100px;">
+              Order Online
+            </span>
+          </div>
+        </div>
 
-                            <div class="promotions-details">
-                                <h3>10% off on your first Online Order</h3>
-                                <p>Minimin $50, New Customers Only*</p>
-                                <span class=" btn btn-warning" ,
-                                    style="background-color: #f8bf2c; border: 2px solid #f8bf2c; border-radius: 3px; color: black;margin:20px 0px;width: 80%;"
-                                    data-glf-cuid="8860f8da-c1fc-4738-a876-f5e3227a75c4"
-                                    data-glf-ruid="ea8cde35-ad76-42d2-b50a-4f428c8f3515">Order Online</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-    </section>
+        <!-- Second Promotion -->
+        <div class="single-promotions">
+          <div class="promotions-img">
+            <img src="img/promotions/promo_slide_2.png" alt="">
+          </div>
+          <div class="promotions-details">
+            <h3>10% off on your first Online Order</h3>
+            <p>Minimum $50, New Customers Only*</p>
+            <span class="btn btn-warning"
+                  id="openOrderPromo2"
+                  style="background-color: #f8bf2c; border: 2px solid #f8bf2c; border-radius: 3px; color: black; margin-top: 5px; margin-left: 100px;">
+              Order Online
+            </span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Modal -->
+<div id="promoModal1" class="modal" style="display:none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.5);">
+  <div class="modal-content" style="background: white; margin: 10% auto; padding: 20px; border-radius: 8px; max-width: 400px; position: relative;">
+    <span class="close" id="closePromoModal1" style="position: absolute; top: 10px; right: 15px; font-size: 28px; font-weight: bold; cursor: pointer;">&times;</span>
+    <h2 style="text-align: center; color: black; font-weight: bold;">Choose Location</h2>
+
+    <span class="btn btn-warning"
+          style="display: block; background-color: #f8bf2c; border: 2px solid #f8bf2c; font-weight: bold; border-radius: 3px; color: black; margin: 10px 0; padding: 12px; width: 100%; text-align: center;"
+          data-glf-cuid="8860f8da-c1fc-4738-a876-f5e3227a75c4"
+          data-glf-ruid="ea8cde35-ad76-42d2-b50a-4f428c8f3515">
+      Vancouver Location
+    </span>
+
+    <span class="btn btn-warning"
+          style="display: block; background-color: #f8bf2c; border: 2px solid #f8bf2c; font-weight: bold; border-radius: 3px; color: black; margin: 10px 0; padding: 12px; width: 100%; text-align: center;"
+          data-glf-cuid="8860f8da-c1fc-4738-a876-f5e3227a75c4"
+          data-glf-ruid="819a6c57-c397-4369-9a9a-793b9f39f62f">
+      Portland Location
+    </span>
+  </div>
+</div>
+
+
+<!-- Modal -->
+<div id="promoModal2" class="modal" style="display:none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.5);">
+  <div class="modal-content" style="background: white; margin: 10% auto; padding: 20px; border-radius: 8px; max-width: 400px; position: relative;">
+    <span class="close" id="closePromoModal2" style="position: absolute; top: 10px; right: 15px; font-size: 28px; font-weight: bold; cursor: pointer;">&times;</span>
+    <h2 style="text-align: center; color: black; font-weight: bold;">Choose Location</h2>
+
+    <span class="btn btn-warning"
+          style="display: block; background-color: #f8bf2c; border: 2px solid #f8bf2c; font-weight: bold; border-radius: 3px; color: black; margin: 10px 0; padding: 12px; width: 100%; text-align: center;"
+          data-glf-cuid="8860f8da-c1fc-4738-a876-f5e3227a75c4"
+          data-glf-ruid="ea8cde35-ad76-42d2-b50a-4f428c8f3515">
+      Vancouver Location
+    </span>
+
+    <span class="btn btn-warning"
+          style="display: block; background-color: #f8bf2c; border: 2px solid #f8bf2c; font-weight: bold; border-radius: 3px; color: black; margin: 10px 0; padding: 12px; width: 100%; text-align: center;"
+          data-glf-cuid="8860f8da-c1fc-4738-a876-f5e3227a75c4"
+          data-glf-ruid="819a6c57-c397-4369-9a9a-793b9f39f62f">
+      Portland Location
+    </span>
+  </div>
+</div>
+
+
     <!--SPEACIAL PROMOTIONS AREA END-->
 
     <!--MENUS AREA-->
@@ -763,6 +815,42 @@
         </div>
     </div>
     <!--FOOER AREA END-->
+
+    <!-- Modal Script -->
+<script>
+  const promoModal1 = document.getElementById("promoModal1");
+  const promoModal2 = document.getElementById("promoModal2");
+  const closePromoModal1 = document.getElementById("closePromoModal1");
+  const closePromoModal2 = document.getElementById("closePromoModal2");
+
+  const openOrderPromo1 = document.getElementById("openOrderPromo1");
+  const openOrderPromo2 = document.getElementById("openOrderPromo2");
+
+  openOrderPromo1.onclick = () => {
+    promoModal1.style.display = "block";
+  };
+  openOrderPromo2.addEventListener("click", () => {
+    promoModal2.style.display = "block";
+  });
+
+  closePromoModal1.onclick = () => {
+    promoModal1.style.display = "none";
+  };
+  closePromoModal2.onclick = () => {
+    promoModal2.style.display = "none";
+  };
+
+  window.onclick = (event) => {
+    if (event.target === promoModal1) {
+      promoModal1.style.display = "none";
+    }
+  };
+   window.onclick = (event) => {
+    if (event.target === promoModal2) {
+      promoModal2.style.display = "none";
+    }
+  };
+</script>
 
     <!-- hamburger script -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
