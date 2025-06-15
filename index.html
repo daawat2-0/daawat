@@ -184,8 +184,7 @@
 
                             <span class="btn reservation"
                                   style="background-color: #f8bf2c; border: 2px solid #f8bf2c; border-radius: 3px; color: black;margin-top: 5px;"
-                                  data-glf-cuid="8860f8da-c1fc-4738-a876-f5e3227a75c4"
-                                  data-glf-ruid="ea8cde35-ad76-42d2-b50a-4f428c8f3515"
+                                  
                                   data-glf-reservation="true">Table
                                 Reservation</span>
                             <script src="https://www.fbgcdn.com/embedder/js/ewm2.js" defer async></script>
@@ -233,8 +232,7 @@
                     </span>
                     <span class="btn reservation"
                           style="flex: 1; background-color: #f8bf2c; border: 2px solid #f8bf2c; border-radius: 3px; color: black; margin: 5px; text-align: center; padding: 10px;"
-                          data-glf-cuid="8860f8da-c1fc-4738-a876-f5e3227a75c4"
-                          data-glf-ruid="ea8cde35-ad76-42d2-b50a-4f428c8f3515" data-glf-reservation="true">
+                           data-glf-reservation="true">
                         Table Reservation
                     </span>
                     <script src="https://www.fbgcdn.com/embedder/js/ewm2.js" defer async></script>
@@ -280,18 +278,184 @@
                 <h1 class="pogoSlider-slide-element" data-in="expand" data-out="flipX" data-duration="1500">to
                     <span>Taste</span> Authentic Indian Food
                 </h1>
-                <span class="btn reservation"
-                      style="background-color: #f8bf2c; border: 2px solid #f8bf2c; border-radius: 3px; color: black;margin-top: 5px;"
-                      data-glf-cuid="8860f8da-c1fc-4738-a876-f5e3227a75c4"
-                      data-glf-ruid="ea8cde35-ad76-42d2-b50a-4f428c8f3515" data-glf-reservation="true"
-                      id="glfButton1">Table
-                    Reservation</span>
+                <span
+  class="btn reservation"
+  id="tableReservationBtn2"
+  style="background-color: #f8bf2c; border: 2px solid #f8bf2c; border-radius: 3px; color: black; margin-top: 5px;"
+  data-glf-reservation="true"
+>
+  Table Reservation
+</span>
+
             </div>
         </div>
     </div>
     <!--HOME SLIDER AREA END-->
 
 </header>
+<!-- Table reservation 2-->
+<div id="tableReservationModal2" class="modal" style="display:none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.5);">
+  <div class="modal-content" style="background: white; margin: 10% auto; padding: 20px; border-radius: 8px; max-width: 400px; position: relative;">
+    <span class="close" id="closeTableReservationModalBtn2" style="position: absolute; top: 10px; right: 15px; font-size: 28px; font-weight: bold; cursor: pointer;">&times;</span>
+    <h2 style="text-align: center; color: black; font-weight: bold;">Choose Location</h2>
+
+    <span
+      class="btn btn-warning"
+      style="display: block; background-color: #f8bf2c; border: 2px solid #f8bf2c; font-weight: bold; border-radius: 3px; color: black; margin: 10px 0; padding: 12px; width: 100%; text-align: center;"
+      id="openGratuityModalBtn2"
+    >
+      Vancouver Location
+    </span>
+  </div>
+</div>
+<div id="gratuityModal2" class="modal" style="display:none; position: fixed; z-index: 1100; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.5);">
+  <div class="modal-content" style="background: white; margin: 10% auto; padding: 20px; border-radius: 8px; max-width: 400px; position: relative; text-align: center;">
+    <span class="close" id="closeGratuityModalBtn2" style="position: absolute; top: 10px; right: 15px; font-size: 28px; font-weight: bold; cursor: pointer;">&times;</span>
+    <p style="font-size: 16px; font-weight: bold; color: black; ; padding: 10px; background-color: #f8bf2c;">
+  Attention: 18% Gratuity will apply for parties 8 & Over
+</p>
+    <button
+      id="acknowledgeBtn2"
+      class="btn"
+      data-glf-cuid="8860f8da-c1fc-4738-a876-f5e3227a75c4"
+      data-glf-ruid="ea8cde35-ad76-42d2-b50a-4f428c8f3515"
+      data-glf-reservation="true"
+      style="margin-top: 20px; padding: 10px 20px; background-color: #f8bf2c; border: 2px solid #f8bf2c; border-radius: 5px; font-weight: bold; cursor: pointer; color: black;"
+    >
+      I acknowledge
+    </button>
+  </div>
+</div>
+<script>
+  // Reservation Modal Logic
+  const tableReservationModal2 = document.getElementById("tableReservationModal2");
+  const openTableReservationBtn2 = document.getElementById("tableReservationBtn2");
+  const closeTableReservationBtn2 = document.getElementById("closeTableReservationModalBtn2");
+
+  openTableReservationBtn2.onclick = () => {
+    tableReservationModal2.style.display = "block";
+  };
+
+  closeTableReservationBtn2.onclick = () => {
+    tableReservationModal2.style.display = "none";
+  };
+
+  window.addEventListener("click", (e) => {
+    if (e.target === tableReservationModal2) {
+      tableReservationModal2.style.display = "none";
+    }
+  });
+
+  // Gratuity Modal Logic
+  const gratuityModal2 = document.getElementById("gratuityModal2");
+  const openGratuityModalBtn2 = document.getElementById("openGratuityModalBtn2");
+  const closeGratuityModalBtn2 = document.getElementById("closeGratuityModalBtn2");
+
+  openGratuityModalBtn2.onclick = () => {
+    tableReservationModal2.style.display = "none";
+    gratuityModal2.style.display = "block";
+  };
+
+  closeGratuityModalBtn2.onclick = () => {
+    gratuityModal2.style.display = "none";
+  };
+
+  window.addEventListener("click", (e) => {
+    if (e.target === gratuityModal2) {
+      gratuityModal2.style.display = "none";
+    }
+  });
+</script>
+
+<!-- Reservation Modal -->
+<div id="reservationModal" class="modal" style="display:none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.5);">
+  <div class="modal-content" style="background: white; margin: 10% auto; padding: 20px; border-radius: 8px; max-width: 400px; position: relative;">
+    <span class="close" id="closeReservationModalBtn" style="position: absolute; top: 10px; right: 15px; font-size: 28px; font-weight: bold; cursor: pointer;">&times;</span>
+    <h2 style="text-align: center; color: black; font-weight: bold;">Choose Location</h2>
+
+    <span class="btn btn-warning"
+          id="openGratuityModalBtn"
+          style="display: block; background-color: #f8bf2c; border: 2px solid #f8bf2c; font-weight: bold; border-radius: 3px; color: black; margin: 10px 0; padding: 12px; width: 100%; text-align: center;"
+          
+          data-glf-reservation="true">
+       Vancouver Location
+    </span>
+  </div>
+</div>
+
+<!-- Gratuity Info Modal -->
+<div id="gratuityModal" class="modal" style="display:none; position: fixed; z-index: 1100; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.5);">
+  <div class="modal-content" style="background: white; margin: 10% auto; padding: 20px; border-radius: 8px; max-width: 400px; position: relative; text-align: center;">
+    <span class="close" id="closeGratuityModalBtn" style="position: absolute; top: 10px; right: 15px; font-size: 28px; font-weight: bold; cursor: pointer;">&times;</span>
+    
+    <p style="font-size: 16px; font-weight: bold; color: black; ; padding: 10px; background-color: #f8bf2c;">
+  Attention: 18% Gratuity will apply for parties 8 & Over
+</p>
+
+    
+    <!-- "I acknowledge" button with plugin attributes -->
+    <button
+  id="acknowledgeBtn"
+  class="btn"
+  data-glf-cuid="8860f8da-c1fc-4738-a876-f5e3227a75c4"
+  data-glf-ruid="ea8cde35-ad76-42d2-b50a-4f428c8f3515"
+  data-glf-reservation="true"
+  style="margin-top: 20px; padding: 10px 20px; background-color: #f8bf2c; border: 2px solid #f8bf2c; border-radius: 5px; font-weight: bold; cursor: pointer; color: black;"
+>
+  I acknowledge
+</button>
+
+  </div>
+</div>
+
+<!-- Plugin Script -->
+<script src="https://www.fbgcdn.com/embedder/js/ewm2.js" defer async></script>
+
+
+<!-- Script -->
+<script>
+  const reservationModal = document.getElementById("reservationModal");
+  const closeReservationBtn = document.getElementById("closeReservationModalBtn");
+  const openReservationBtn = document.querySelector('.btn.reservation');
+
+  const gratuityModal = document.getElementById("gratuityModal");
+  const closeGratuityBtn = document.getElementById("closeGratuityModalBtn");
+  const openGratuityBtn = document.getElementById("openGratuityModalBtn");
+  const acknowledgeBtn = document.getElementById("acknowledgeBtn");
+
+  if (openReservationBtn) {
+    openReservationBtn.addEventListener("click", () => {
+      reservationModal.style.display = "block";
+    });
+  }
+
+  closeReservationBtn.onclick = () => {
+    reservationModal.style.display = "none";
+  };
+
+  window.addEventListener("click", (event) => {
+    if (event.target === reservationModal) {
+      reservationModal.style.display = "none";
+    }
+    if (event.target === gratuityModal) {
+      gratuityModal.style.display = "none";
+    }
+  });
+
+  openGratuityBtn.onclick = () => {
+    reservationModal.style.display = "none";
+    gratuityModal.style.display = "block";
+  };
+
+  closeGratuityBtn.onclick = () => {
+    gratuityModal.style.display = "none";
+  };
+
+  acknowledgeBtn.onclick = () => {
+    gratuityModal.style.display = "none";
+    // You can trigger your reservation logic here if needed
+  };
+</script>
 
 <!-- Modal HTML -->
 <div id="orderModal" class="modal" style="display:none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.5);">
