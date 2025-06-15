@@ -230,11 +230,15 @@
                           >
                         Order Online
                     </span>
-                    <span class="btn reservation"
-                          style="flex: 1; background-color: #f8bf2c; border: 2px solid #f8bf2c; border-radius: 3px; color: black; margin: 5px; text-align: center; padding: 10px;"
-                           data-glf-reservation="true">
-                        Table Reservation
-                    </span>
+                    <span
+  class="btn reservation"
+  id="tableReservationBtn3"
+  style="flex: 1; background-color: #f8bf2c; border: 2px solid #f8bf2c; border-radius: 3px; color: black; margin: 5px; text-align: center; padding: 10px;"
+  data-glf-reservation="true"
+>
+  Table Reservation
+</span>
+
                     <script src="https://www.fbgcdn.com/embedder/js/ewm2.js" defer async></script>
                 </div>
 
@@ -365,6 +369,80 @@
       gratuityModal2.style.display = "none";
     }
   });
+</script>
+<!-- moblie table reservation modal -->
+ <div id="tableReservationModal3" class="modal" style="display:none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.5);">
+  <div class="modal-content" style="background: white; margin: 10% auto; padding: 20px; border-radius: 8px; max-width: 400px; position: relative;">
+    <span class="close" id="closeTableReservationModalBtn3" style="position: absolute; top: 10px; right: 15px; font-size: 28px; font-weight: bold; cursor: pointer;">&times;</span>
+    <h2 style="text-align: center; color: black; font-weight: bold;">Choose Location</h2>
+
+    <span
+      class="btn btn-warning"
+      style="display: block; background-color: #f8bf2c; border: 2px solid #f8bf2c; font-weight: bold; border-radius: 3px; color: black; margin: 10px 0; padding: 12px; width: 100%; text-align: center;"
+      id="openGratuityModalBtn3"
+    >
+      Vancouver Location
+    </span>
+  </div>
+</div>
+<div id="gratuityModal3" class="modal" style="display:none; position: fixed; z-index: 1100; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.5);">
+  <div class="modal-content" style="background: white; margin: 10% auto; padding: 20px; border-radius: 8px; max-width: 400px; position: relative; text-align: center;">
+    <span class="close" id="closeGratuityModalBtn3" style="position: absolute; top: 10px; right: 15px; font-size: 28px; font-weight: bold; cursor: pointer;">&times;</span>
+    <p style="font-size: 16px; font-weight: bold; color: black; padding: 10px; background-color: #f8bf2c; border-radius: 4px;">
+      Attention: 18% Gratuity will apply for parties 8 & Over
+    </p>
+    <button
+      id="acknowledgeBtn3"
+      class="btn"
+      data-glf-cuid="8860f8da-c1fc-4738-a876-f5e3227a75c4"
+      data-glf-ruid="ea8cde35-ad76-42d2-b50a-4f428c8f3515"
+      data-glf-reservation="true"
+      style="margin-top: 20px; padding: 10px 20px; background-color: #f8bf2c; border: 2px solid #f8bf2c; border-radius: 5px; font-weight: bold; cursor: pointer; color: black;"
+    >
+      I acknowledge
+    </button>
+  </div>
+</div>
+<script>
+  // Modal 3 logic
+  const tableReservationModal3 = document.getElementById("tableReservationModal3");
+  const openTableReservationBtn3 = document.getElementById("tableReservationBtn3");
+  const closeTableReservationModalBtn3 = document.getElementById("closeTableReservationModalBtn3");
+
+  const gratuityModal3 = document.getElementById("gratuityModal3");
+  const openGratuityModalBtn3 = document.getElementById("openGratuityModalBtn3");
+  const closeGratuityModalBtn3 = document.getElementById("closeGratuityModalBtn3");
+
+  // Open Reservation Modal
+  openTableReservationBtn3.onclick = () => {
+    tableReservationModal3.style.display = "block";
+  };
+
+  // Close Reservation Modal
+  closeTableReservationModalBtn3.onclick = () => {
+    tableReservationModal3.style.display = "none";
+  };
+
+  // Open Gratuity Modal
+  openGratuityModalBtn3.onclick = () => {
+    tableReservationModal3.style.display = "none";
+    gratuityModal3.style.display = "block";
+  };
+
+  // Close Gratuity Modal
+  closeGratuityModalBtn3.onclick = () => {
+    gratuityModal3.style.display = "none";
+  };
+
+  // Close on click outside (both modals)
+  window.onclick = (event) => {
+    if (event.target === tableReservationModal3) {
+      tableReservationModal3.style.display = "none";
+    }
+    if (event.target === gratuityModal3) {
+      gratuityModal3.style.display = "none";
+    }
+  };
 </script>
 
 <!-- Reservation Modal -->
