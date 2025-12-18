@@ -133,7 +133,7 @@ const vancouverMenu = [
 
     //Sides
     { itemName: "Paappadum", price: 2.50, Ingredients: "A crispy wafer made with lentils and sun dried.", type: "vancouverSides", imageLink: "./Menu/Papadum.png" },
-    { itemName: "Desi Salad", price: 6.99, Ingredients: "Consists of cucumber, onion, carrots, tomato, and cabbage topped", type: "vancouverSides", imageLink: "./Menu/desi salad.png" },
+    { itemName: "Desi Salad", price: 6.99, Ingredients: "Consists of cucumber, onion, carrots, tomato, and cabbage topped", type: "vancouverSides", imageLink: "./Menu/desi salad1.jpeg" },
     { itemName: "Kachumber Salad", price: 9.99, Ingredients: "Vegetables topped served on crispy wafer made with lentils topped with salt, pepper, and lemon juice", type: "vancouverSides", imageLink: "./Menu/kachumber salad.png" },
     { itemName: "Mint Chutney", price: 2.50, Ingredients: "Mint/Cilantro chutney is a perfect dipping sauce", type: "vancouverSides", imageLink: "./Menu/mint chutney.png" },
     { itemName: "Imli Chutney", price: 2.50, Ingredients: "Imli is Tamarind. Its an exotic sweet & sour dipping sauce.", type: "vancouverSides", imageLink: "./Menu/imli chutney.png" },
