@@ -79,7 +79,7 @@ const portLandMenu = [
     {itemName : "Bollywood Wings", price : 11.99, Ingredients : "",type:"portlandIndianStreetFood", imageLink : "./Menu/bollywood wings.png"},
     {itemName : "Pani Puri", price : 6.99, Ingredients : "Hollow fried ball filled with potato, chickpeas, onions and flavored water",type:"portlandIndianStreetFood", imageLink : "./Menu/pani puri.png"},
     {itemName : "Paappadum", price : 2.50, Ingredients : "Thin and crispy snack",type:"portlandIndianStreetFood", imageLink : "./Menu/Papadum.png"},
-    {itemName : "Desi Salad", price : 6.99, Ingredients : "Indian style salad",type:"portlandIndianStreetFood", imageLink : "./Menu/desi salad.png"},
+    {itemName : "Desi Salad", price : 6.99, Ingredients : "Indian style salad",type:"portlandIndianStreetFood", imageLink : "./Menu/desi salad1.jpeg"},
     {itemName : "Mint Chutney", price : 2.50, Ingredients : "Sauce made out of mint",type:"portlandIndianStreetFood", imageLink : "./Menu/mint chutney.png"},
     {itemName : "Tamarind Chutney", price : 2.50, Ingredients : "Sauce made out of tamarind",type:"portlandIndianStreetFood", imageLink : "./Menu/tamarind chutney.png"},
     {itemName : "Mixed Pickle", price : 3.99, Ingredients : "Pickled veggies",type:"portlandIndianStreetFood", imageLink : "./Menu/mixed pickle.png"},
